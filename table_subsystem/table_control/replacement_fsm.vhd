@@ -7,12 +7,11 @@ entity replacement_fsm is
 		start: 				in std_logic;
 		valid_bits:			in std_logic_vector(31 downto 0);
 		hit_bits:			in std_logic_vector(31 downto 0);
-		overw_valid_bits:	out std_logic_vector(31 downto 0);
-		overw_hit_bits:		out std_logic_vector(31 downto 0);
 		overw_valid_en:		out std_logic;
 		overw_hit_en:		out std_logic;
 		next_rep_addr: 		out std_logic_vector(4 downto 0);
 		next_rep_en:		out std_logic;
+		counter_value_out	:	out std_logic_vector(31 downto 0);
 		done: 				out std_logic
 	);
 end replacement_fsm;
@@ -22,18 +21,20 @@ architecture replacement_fsm_rtl of replacement_fsm is
 	component first_zero_decoder is
 		port(
 			input:		in std_logic_vector(31 downto 0);
-			one_hot:	out std_logic_vector(31 downto 0);
+			addr_out:	out std_logic_vector(4 downto 0);
 			no_zero:	out std_logic
 		);
 	end component;
 	
-	component counter32v2 is
+	component counter32_bit is
 		port
 		(
-			clock: 	in std_logic;
-			cnt_en: 	in std_logic;
-			sset: 	in std_logic;
-			q:		 	out std_logic_vector(31 downto 0)
+			clock		: IN STD_LOGIC ;
+			cnt_en		: IN STD_LOGIC ;
+			data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+			sload		: IN STD_LOGIC ;
+			sset		: IN STD_LOGIC ;
+			q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 		);
 	end component;
 
@@ -117,94 +118,24 @@ begin
 		end if;
 	end process;
 
-	overw_valid_bits <= (hit_bits and valid_bits);
-	overw_hit_bits <= (others => '0');
+	
 
+	-- return valid file replacement address
 	valid_bit_decoder_inst: first_zero_decoder
 	port map(
 		input => valid_bits,
-		one_hot => valid_file_rep_1hot,
+		addr_out => valid_file_rep_addr,
 		no_zero => valid_file_full
 	);
-
+	
+	-- return hit file replacement address
 	hit_bit_decoder_inst: first_zero_decoder
 	port map(
 		input => hit_bits,
-		one_hot => hit_file_rep_1hot,
+		addr_out => hit_file_rep_addr,
 		no_zero => hit_file_full
 	);
 
-	with
-	valid_file_rep_1hot select
-		valid_file_rep_addr <=
-			"00000" when "00000000000000000000000000000001",
-			"00001" when "00000000000000000000000000000010",
-			"00010" when "00000000000000000000000000000100",
-			"00011" when "00000000000000000000000000001000",
-			"00100" when "00000000000000000000000000010000",
-			"00101" when "00000000000000000000000000100000",
-			"00110" when "00000000000000000000000001000000",
-			"00111" when "00000000000000000000000010000000",
-			"01000" when "00000000000000000000000100000000",
-			"01001" when "00000000000000000000001000000000",
-			"01010" when "00000000000000000000010000000000",
-			"01011" when "00000000000000000000100000000000",
-			"01100" when "00000000000000000001000000000000",
-			"01101" when "00000000000000000010000000000000",
-			"01110" when "00000000000000000100000000000000",
-			"01111" when "00000000000000001000000000000000",
-			"10000" when "00000000000000010000000000000000",
-			"10001" when "00000000000000100000000000000000",
-			"10010" when "00000000000001000000000000000000",
-			"10011" when "00000000000010000000000000000000",
-			"10100" when "00000000000100000000000000000000",
-			"10101" when "00000000001000000000000000000000",
-			"10110" when "00000000010000000000000000000000",
-			"10111" when "00000000100000000000000000000000",
-			"11000" when "00000001000000000000000000000000",
-			"11001" when "00000010000000000000000000000000",
-			"11010" when "00000100000000000000000000000000",
-			"11011" when "00001000000000000000000000000000",
-			"11100" when "00010000000000000000000000000000",
-			"11101" when "00100000000000000000000000000000",
-			"11110" when "01000000000000000000000000000000",
-			"11111" when others;
-
-	with
-	hit_file_rep_1hot select
-		hit_file_rep_addr <=
-			"00000" when "00000000000000000000000000000001",
-			"00001" when "00000000000000000000000000000010",
-			"00010" when "00000000000000000000000000000100",
-			"00011" when "00000000000000000000000000001000",
-			"00100" when "00000000000000000000000000010000",
-			"00101" when "00000000000000000000000000100000",
-			"00110" when "00000000000000000000000001000000",
-			"00111" when "00000000000000000000000010000000",
-			"01000" when "00000000000000000000000100000000",
-			"01001" when "00000000000000000000001000000000",
-			"01010" when "00000000000000000000010000000000",
-			"01011" when "00000000000000000000100000000000",
-			"01100" when "00000000000000000001000000000000",
-			"01101" when "00000000000000000010000000000000",
-			"01110" when "00000000000000000100000000000000",
-			"01111" when "00000000000000001000000000000000",
-			"10000" when "00000000000000010000000000000000",
-			"10001" when "00000000000000100000000000000000",
-			"10010" when "00000000000001000000000000000000",
-			"10011" when "00000000000010000000000000000000",
-			"10100" when "00000000000100000000000000000000",
-			"10101" when "00000000001000000000000000000000",
-			"10110" when "00000000010000000000000000000000",
-			"10111" when "00000000100000000000000000000000",
-			"11000" when "00000001000000000000000000000000",
-			"11001" when "00000010000000000000000000000000",
-			"11010" when "00000100000000000000000000000000",
-			"11011" when "00001000000000000000000000000000",
-			"11100" when "00010000000000000000000000000000",
-			"11101" when "00100000000000000000000000000000",
-			"11110" when "01000000000000000000000000000000",
-			"11111" when others;
 
 	NEXT_REPLACE: process(valid_file_full, hit_file_full, valid_file_rep_addr, hit_file_rep_addr)
 	begin
@@ -217,15 +148,24 @@ begin
 		end if;
 	end process;
 	
-	big_counter_inst: counter32v2
+	
+	
+	big_counter_inst: counter32_bit
 	port map(
 		clock => clk, 
 		cnt_en => timer_en,
-		sset => counter_set,
+		data => x"00000010",
+		sload => counter_set,
+		sset => '0',
 		q => counter_value
 	);
 	
-	timer_done <= '1' when (counter_value = "00000000000000000000000000000000") else '0';
+	counter_value_out <= counter_value;
+	
+	
+	-- Only enable timer when it is not done (restarted!)
+	timer_done <= '1' when (counter_value = x"00000000") else '0';
+
 	timer_en <= not(timer_done);
 		
 end replacement_fsm_rtl;
