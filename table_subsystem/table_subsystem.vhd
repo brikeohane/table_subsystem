@@ -55,8 +55,6 @@ architecture table_subsystem_rtl of table_subsystem is
 			cam_hit:				in std_logic;
 			cam_valid_bits: 	in std_logic_vector(31 downto 0);
 			cam_hit_bits:		in std_logic_vector(31 downto 0);
-			cam_overw_v_bits:	out std_logic_vector(31 downto 0);
-			cam_overw_h_bits:	out std_logic_vector(31 downto 0);
 			cam_overw_v_en: 	out std_logic;
 			cam_overw_h_en:	out std_logic;
 			cam_next_rep_addr: out std_logic_vector(4 downto 0);
@@ -155,8 +153,6 @@ begin
 		cam_hit => cam_hit_sig,
 		cam_valid_bits => cam_valid_bits_sig,
 		cam_hit_bits => cam_hit_bits_sig,
-		cam_overw_v_bits => cam_overw_v_bits_sig,
-		cam_overw_h_bits => cam_overw_h_bits_sig,
 		cam_overw_v_en => cam_overw_v_en_sig,
 		cam_overw_h_en => cam_overw_h_en_sig,
 		cam_next_rep_addr => cam_next_rep_addr_sig,

@@ -67,8 +67,6 @@ architecture table_control_rtl of table_control is
 			start: 				in std_logic;
 			valid_bits:			in std_logic_vector(31 downto 0);
 			hit_bits:			in std_logic_vector(31 downto 0);
-			overw_valid_bits:	out std_logic_vector(31 downto 0);
-			overw_hit_bits:		out std_logic_vector(31 downto 0);
 			overw_valid_en:		out std_logic;
 			overw_hit_en:		out std_logic;
 			next_rep_addr: 		out std_logic_vector(4 downto 0);
@@ -117,8 +115,6 @@ begin
 		start => aging_start,
 		valid_bits => cam_valid_bits,
 		hit_bits => cam_hit_bits,
-		overw_valid_bits => cam_overw_v_bits,
-		overw_hit_bits => cam_overw_h_bits,
 		overw_valid_en => cam_overw_v_en,
 		overw_hit_en => cam_overw_h_en,
 		next_rep_addr => cam_next_rep_addr,
