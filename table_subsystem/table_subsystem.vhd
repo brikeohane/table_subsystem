@@ -24,10 +24,8 @@ architecture table_subsystem_rtl of table_subsystem is
 			data_in:				in std_logic_vector(1 downto 0);
 			data_out: 				out std_logic_vector(1 downto 0);
 			hit:					out std_logic;
-			overwrite_valid_bits: 	in std_logic_vector(31 downto 0);
 			overwrite_valid_en:		in std_logic;
 			valid_bits:				out std_logic_vector(31 downto 0);
-			overwrite_hit_bits:		in std_logic_vector(31 downto 0);
 			overwrite_hit_en:		in std_logic;
 			hit_bits:				out std_logic_vector(31 downto 0);
 			next_replace_addr:		in std_logic_vector(4 downto 0);
@@ -98,8 +96,6 @@ architecture table_subsystem_rtl of table_subsystem is
 	signal cam_hit_sig: std_logic;
 	signal cam_valid_bits_sig: std_logic_vector(31 downto 0);
 	signal cam_hit_bits_sig: std_logic_vector(31 downto 0);
-	signal cam_overw_v_bits_sig: std_logic_vector(31 downto 0);
-	signal cam_overw_h_bits_sig: std_logic_vector(31 downto 0);
 	signal cam_overw_v_en_sig: std_logic;
 	signal cam_overw_h_en_sig: std_logic;
 	signal cam_next_rep_addr_sig: std_logic_vector(4 downto 0);
@@ -128,10 +124,8 @@ begin
 		data_in => cam_SA_port_sig,
 		data_out => cam_DA_port_sig,
 		hit => cam_hit_sig,
-		overwrite_valid_bits => cam_overw_v_bits_sig,
 		overwrite_valid_en => cam_overw_v_en_sig,
 		valid_bits => cam_valid_bits_sig,
-		overwrite_hit_bits => cam_overw_h_bits_sig,
 		overwrite_hit_en => cam_overw_h_en_sig,
 		hit_bits => cam_hit_bits_sig,
 		next_replace_addr => cam_next_rep_addr_sig,

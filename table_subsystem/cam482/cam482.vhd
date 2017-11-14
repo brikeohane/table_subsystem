@@ -10,10 +10,8 @@ entity cam482 is
 		data_in:				in std_logic_vector(1 downto 0);
 		data_out: 				out std_logic_vector(1 downto 0);
 		hit:					out std_logic;
-		overwrite_valid_bits: 	in std_logic_vector(31 downto 0);
 		overwrite_valid_en:		in std_logic;
 		valid_bits:				out std_logic_vector(31 downto 0);
-		overwrite_hit_bits:		in std_logic_vector(31 downto 0);
 		overwrite_hit_en:		in std_logic;
 		hit_bits:				out std_logic_vector(31 downto 0);
 		next_replace_addr:		in std_logic_vector(4 downto 0);
@@ -43,6 +41,18 @@ architecture rtl of cam482 is
 			w_data:			in std_logic_vector(1 downto 0);
 			r_addr:			in std_logic_vector(4 downto 0);		
 			r_data:			out std_logic_vector(1 downto 0)
+		);
+	end component;
+
+	component HitandValidFile is 
+		port (
+			valid_out: 			out std_logic_vector(31 downto 0);
+			CAMselectWrite: 	in std_logic_vector(4 downto 0); 
+			Clear_Valid:		in std_logic; 
+			Clear_Hit:			in 	std_logic; 
+			CAMWriteEnable: 	in std_logic;
+			clk : 				in std_logic;
+			reset: 				in std_logic 
 		);
 	end component;
 
@@ -90,32 +100,15 @@ begin
 		r_data => 	data_out
 	);
 
-	valid_file_inst: one_bit_reg_file
+	hit_valid_file_inst: HitandValidFile
 	port map(
-		clk =>			clk,
-		reset =>		reset,
-		wr_en => 		wr_en,
-		w_addr =>		addr_signal,		
-		w_bit =>		logic_high,	
-		r_addr =>		addr_signal,	
-		r_bit =>		valid_bit,	
-		overwrite =>	overwrite_valid_bits,		
-		overwrite_en =>	overwrite_valid_en,	
-		full_data =>	valid_bits		
-	);
-
-	hit_file_inst: one_bit_reg_file
-	port map(
-		clk =>			clk,
-		reset =>		reset,
-		wr_en => 		logic_high,
-		w_addr =>		addr_signal,	
-		w_bit =>		logic_high,	
-		r_addr =>		addr_default,	
-		r_bit =>		open,
-		overwrite =>	overwrite_hit_bits,		
-		overwrite_en =>	overwrite_hit_en,	
-		full_data =>	hit_bits		
+		valid_out => valid_bits,	
+		CAMselectWrite => addr_signal,
+		Clear_Valid => overwrite_valid_en,
+		Clear_Hit => overwrite_hit_en,	
+		CAMWriteEnable => wr_en,
+		clk => clk,
+		reset => reset		
 	);
 
 	hit <= (key_hit and valid_bit);
