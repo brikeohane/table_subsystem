@@ -23,8 +23,6 @@ entity table_control is
 		cam_hit:			in std_logic;
 		cam_valid_bits: 	in std_logic_vector(31 downto 0);
 		cam_hit_bits:		in std_logic_vector(31 downto 0);
-		cam_overw_v_bits:	out std_logic_vector(31 downto 0);
-		cam_overw_h_bits:	out std_logic_vector(31 downto 0);
 		cam_overw_v_en: 	out std_logic;
 		cam_overw_h_en:		out std_logic;
 		cam_next_rep_addr: 	out std_logic_vector(4 downto 0);

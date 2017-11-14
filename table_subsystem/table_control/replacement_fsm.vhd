@@ -26,7 +26,7 @@ architecture replacement_fsm_rtl of replacement_fsm is
 		);
 	end component;
 	
-	component counter32_bit is
+	component counter32v2 is
 		port
 		(
 			clock		: IN STD_LOGIC ;
@@ -150,11 +150,11 @@ begin
 	
 	
 	
-	big_counter_inst: counter32_bit
+	big_counter_inst: counter32v2
 	port map(
 		clock => clk, 
 		cnt_en => timer_en,
-		data => x"00000010",
+		data => x"F0000000",
 		sload => counter_set,
 		sset => '0',
 		q => counter_value

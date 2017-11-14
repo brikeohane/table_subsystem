@@ -6,6 +6,8 @@ entity HitandValidFile is
 		port (
 		--a 32 bit vector of all valid bits
 		valid_out: out std_logic_vector(31 downto 0);
+		hit_out: out std_logic_vector(31 downto 0);
+		reg_out: out std_logic_vector(1 downto 0);
 		--select one of 32 registers with 5 bit select sequence to write to
 		CAMselectWrite: in std_logic_vector(4 downto 0); 
 		Clear_Valid:	in std_logic; --clears valid bits with hits = 0
@@ -54,8 +56,44 @@ begin
 			valid_out(29) <= rdata(29)(1);
 			valid_out(30) <= rData(30)(1);
 			valid_out(31) <= rdata(31)(1);
+			
+			hit_out(0) <= rData(0)(0);
+			hit_out(1) <= rdata(1)(0);
+			hit_out(2) <= rData(2)(0);
+			hit_out(3) <= rdata(3)(0);
+			hit_out(4) <= rData(4)(0);
+			hit_out(5) <= rdata(5)(0);
+			hit_out(6) <= rData(6)(0);
+			hit_out(7) <= rdata(7)(0);
+			hit_out(8) <= rData(8)(0);
+			hit_out(9) <= rdata(9)(0);
+			hit_out(10) <= rData(10)(0);
+			hit_out(11) <= rdata(11)(0);
+			hit_out(12) <= rData(12)(0);
+			hit_out(13) <= rdata(13)(0);
+			hit_out(14) <= rData(14)(0);
+			hit_out(15) <= rdata(15)(0);
+			hit_out(16) <= rData(16)(0);
+			hit_out(17) <= rdata(17)(0);
+			hit_out(18) <= rData(18)(0);
+			hit_out(19) <= rdata(19)(0);
+			hit_out(20) <= rData(20)(0);
+			hit_out(21) <= rdata(21)(0);
+			hit_out(22) <= rData(22)(0);
+			hit_out(23) <= rdata(23)(0);
+			hit_out(24) <= rData(24)(0);
+			hit_out(25) <= rdata(25)(0);
+			hit_out(26) <= rData(26)(0);
+			hit_out(27) <= rdata(27)(0);
+			hit_out(28) <= rData(28)(0);
+			hit_out(29) <= rdata(29)(0);
+			hit_out(30) <= rData(30)(0);
+			hit_out(31) <= rdata(31)(0);
+			
+			
+			reg_out <= rData(to_integer(unsigned(CAMselectWrite)));
 		
-	process(clk, reset, CAMWriteEnable, Clear_Hit, Clear_Valid) is
+	process(clk, reset, CAMWriteEnable, Clear_Hit, Clear_Valid, rData) is
 	begin
 			if (rising_edge(clk) and reset = '1') then
 				for I in 0 to 31 loop

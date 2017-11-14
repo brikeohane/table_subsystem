@@ -47,6 +47,8 @@ architecture rtl of cam482 is
 	component HitandValidFile is 
 		port (
 			valid_out: 			out std_logic_vector(31 downto 0);
+			hit_out:				out std_logic_vector(31 downto 0);
+			reg_out:				out std_logic_vector(1 downto 0);
 			CAMselectWrite: 	in std_logic_vector(4 downto 0); 
 			Clear_Valid:		in std_logic; 
 			Clear_Hit:			in 	std_logic; 
@@ -72,8 +74,7 @@ architecture rtl of cam482 is
 
 	signal addr_signal: std_logic_vector(4 downto 0);
 	signal key_hit, valid_bit: std_logic;
-	signal logic_high: std_logic;
-	signal addr_default: std_logic_vector(4 downto 0);
+	signal reg_out_s: std_logic_vector(1 downto 0);
 
 begin
 
@@ -103,6 +104,8 @@ begin
 	hit_valid_file_inst: HitandValidFile
 	port map(
 		valid_out => valid_bits,	
+		hit_out => hit_bits,
+		reg_out => reg_out_s,
 		CAMselectWrite => addr_signal,
 		Clear_Valid => overwrite_valid_en,
 		Clear_Hit => overwrite_hit_en,	
@@ -111,11 +114,8 @@ begin
 		reset => reset		
 	);
 
+	valid_bit <= reg_out_s(1);
 	hit <= (key_hit and valid_bit);
-	
-	logic_high <= '1';
-	
-	addr_default <= "00000";	
 end rtl;
 
 
