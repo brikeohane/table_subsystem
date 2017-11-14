@@ -1,0 +1,1691 @@
+$comment
+	File created using the following command:
+		vcd file table_subsystem.msim.vcd -direction
+$end
+$date
+	Mon Nov 06 21:59:11 2017
+$end
+$version
+	ModelSim Version 10.4d
+$end
+$timescale
+	1ps
+$end
+
+$scope module replacement_fsm_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 32 " hit_bits [31:0] $end
+$var reg 1 # reset $end
+$var reg 1 $ start $end
+$var reg 32 % valid_bits [31:0] $end
+$var wire 1 & done $end
+$var wire 1 ' next_rep_addr [4] $end
+$var wire 1 ( next_rep_addr [3] $end
+$var wire 1 ) next_rep_addr [2] $end
+$var wire 1 * next_rep_addr [1] $end
+$var wire 1 + next_rep_addr [0] $end
+$var wire 1 , next_rep_en $end
+$var wire 1 - overw_hit_bits [31] $end
+$var wire 1 . overw_hit_bits [30] $end
+$var wire 1 / overw_hit_bits [29] $end
+$var wire 1 0 overw_hit_bits [28] $end
+$var wire 1 1 overw_hit_bits [27] $end
+$var wire 1 2 overw_hit_bits [26] $end
+$var wire 1 3 overw_hit_bits [25] $end
+$var wire 1 4 overw_hit_bits [24] $end
+$var wire 1 5 overw_hit_bits [23] $end
+$var wire 1 6 overw_hit_bits [22] $end
+$var wire 1 7 overw_hit_bits [21] $end
+$var wire 1 8 overw_hit_bits [20] $end
+$var wire 1 9 overw_hit_bits [19] $end
+$var wire 1 : overw_hit_bits [18] $end
+$var wire 1 ; overw_hit_bits [17] $end
+$var wire 1 < overw_hit_bits [16] $end
+$var wire 1 = overw_hit_bits [15] $end
+$var wire 1 > overw_hit_bits [14] $end
+$var wire 1 ? overw_hit_bits [13] $end
+$var wire 1 @ overw_hit_bits [12] $end
+$var wire 1 A overw_hit_bits [11] $end
+$var wire 1 B overw_hit_bits [10] $end
+$var wire 1 C overw_hit_bits [9] $end
+$var wire 1 D overw_hit_bits [8] $end
+$var wire 1 E overw_hit_bits [7] $end
+$var wire 1 F overw_hit_bits [6] $end
+$var wire 1 G overw_hit_bits [5] $end
+$var wire 1 H overw_hit_bits [4] $end
+$var wire 1 I overw_hit_bits [3] $end
+$var wire 1 J overw_hit_bits [2] $end
+$var wire 1 K overw_hit_bits [1] $end
+$var wire 1 L overw_hit_bits [0] $end
+$var wire 1 M overw_hit_en $end
+$var wire 1 N overw_valid_bits [31] $end
+$var wire 1 O overw_valid_bits [30] $end
+$var wire 1 P overw_valid_bits [29] $end
+$var wire 1 Q overw_valid_bits [28] $end
+$var wire 1 R overw_valid_bits [27] $end
+$var wire 1 S overw_valid_bits [26] $end
+$var wire 1 T overw_valid_bits [25] $end
+$var wire 1 U overw_valid_bits [24] $end
+$var wire 1 V overw_valid_bits [23] $end
+$var wire 1 W overw_valid_bits [22] $end
+$var wire 1 X overw_valid_bits [21] $end
+$var wire 1 Y overw_valid_bits [20] $end
+$var wire 1 Z overw_valid_bits [19] $end
+$var wire 1 [ overw_valid_bits [18] $end
+$var wire 1 \ overw_valid_bits [17] $end
+$var wire 1 ] overw_valid_bits [16] $end
+$var wire 1 ^ overw_valid_bits [15] $end
+$var wire 1 _ overw_valid_bits [14] $end
+$var wire 1 ` overw_valid_bits [13] $end
+$var wire 1 a overw_valid_bits [12] $end
+$var wire 1 b overw_valid_bits [11] $end
+$var wire 1 c overw_valid_bits [10] $end
+$var wire 1 d overw_valid_bits [9] $end
+$var wire 1 e overw_valid_bits [8] $end
+$var wire 1 f overw_valid_bits [7] $end
+$var wire 1 g overw_valid_bits [6] $end
+$var wire 1 h overw_valid_bits [5] $end
+$var wire 1 i overw_valid_bits [4] $end
+$var wire 1 j overw_valid_bits [3] $end
+$var wire 1 k overw_valid_bits [2] $end
+$var wire 1 l overw_valid_bits [1] $end
+$var wire 1 m overw_valid_bits [0] $end
+$var wire 1 n overw_valid_en $end
+
+$scope module i1 $end
+$var wire 1 o gnd $end
+$var wire 1 p vcc $end
+$var wire 1 q unknown $end
+$var tri1 1 r devclrn $end
+$var tri1 1 s devpor $end
+$var tri1 1 t devoe $end
+$var wire 1 u overw_valid_bits[0]~output_o $end
+$var wire 1 v overw_valid_bits[1]~output_o $end
+$var wire 1 w overw_valid_bits[2]~output_o $end
+$var wire 1 x overw_valid_bits[3]~output_o $end
+$var wire 1 y overw_valid_bits[4]~output_o $end
+$var wire 1 z overw_valid_bits[5]~output_o $end
+$var wire 1 { overw_valid_bits[6]~output_o $end
+$var wire 1 | overw_valid_bits[7]~output_o $end
+$var wire 1 } overw_valid_bits[8]~output_o $end
+$var wire 1 ~ overw_valid_bits[9]~output_o $end
+$var wire 1 !! overw_valid_bits[10]~output_o $end
+$var wire 1 "! overw_valid_bits[11]~output_o $end
+$var wire 1 #! overw_valid_bits[12]~output_o $end
+$var wire 1 $! overw_valid_bits[13]~output_o $end
+$var wire 1 %! overw_valid_bits[14]~output_o $end
+$var wire 1 &! overw_valid_bits[15]~output_o $end
+$var wire 1 '! overw_valid_bits[16]~output_o $end
+$var wire 1 (! overw_valid_bits[17]~output_o $end
+$var wire 1 )! overw_valid_bits[18]~output_o $end
+$var wire 1 *! overw_valid_bits[19]~output_o $end
+$var wire 1 +! overw_valid_bits[20]~output_o $end
+$var wire 1 ,! overw_valid_bits[21]~output_o $end
+$var wire 1 -! overw_valid_bits[22]~output_o $end
+$var wire 1 .! overw_valid_bits[23]~output_o $end
+$var wire 1 /! overw_valid_bits[24]~output_o $end
+$var wire 1 0! overw_valid_bits[25]~output_o $end
+$var wire 1 1! overw_valid_bits[26]~output_o $end
+$var wire 1 2! overw_valid_bits[27]~output_o $end
+$var wire 1 3! overw_valid_bits[28]~output_o $end
+$var wire 1 4! overw_valid_bits[29]~output_o $end
+$var wire 1 5! overw_valid_bits[30]~output_o $end
+$var wire 1 6! overw_valid_bits[31]~output_o $end
+$var wire 1 7! overw_hit_bits[0]~output_o $end
+$var wire 1 8! overw_hit_bits[1]~output_o $end
+$var wire 1 9! overw_hit_bits[2]~output_o $end
+$var wire 1 :! overw_hit_bits[3]~output_o $end
+$var wire 1 ;! overw_hit_bits[4]~output_o $end
+$var wire 1 <! overw_hit_bits[5]~output_o $end
+$var wire 1 =! overw_hit_bits[6]~output_o $end
+$var wire 1 >! overw_hit_bits[7]~output_o $end
+$var wire 1 ?! overw_hit_bits[8]~output_o $end
+$var wire 1 @! overw_hit_bits[9]~output_o $end
+$var wire 1 A! overw_hit_bits[10]~output_o $end
+$var wire 1 B! overw_hit_bits[11]~output_o $end
+$var wire 1 C! overw_hit_bits[12]~output_o $end
+$var wire 1 D! overw_hit_bits[13]~output_o $end
+$var wire 1 E! overw_hit_bits[14]~output_o $end
+$var wire 1 F! overw_hit_bits[15]~output_o $end
+$var wire 1 G! overw_hit_bits[16]~output_o $end
+$var wire 1 H! overw_hit_bits[17]~output_o $end
+$var wire 1 I! overw_hit_bits[18]~output_o $end
+$var wire 1 J! overw_hit_bits[19]~output_o $end
+$var wire 1 K! overw_hit_bits[20]~output_o $end
+$var wire 1 L! overw_hit_bits[21]~output_o $end
+$var wire 1 M! overw_hit_bits[22]~output_o $end
+$var wire 1 N! overw_hit_bits[23]~output_o $end
+$var wire 1 O! overw_hit_bits[24]~output_o $end
+$var wire 1 P! overw_hit_bits[25]~output_o $end
+$var wire 1 Q! overw_hit_bits[26]~output_o $end
+$var wire 1 R! overw_hit_bits[27]~output_o $end
+$var wire 1 S! overw_hit_bits[28]~output_o $end
+$var wire 1 T! overw_hit_bits[29]~output_o $end
+$var wire 1 U! overw_hit_bits[30]~output_o $end
+$var wire 1 V! overw_hit_bits[31]~output_o $end
+$var wire 1 W! overw_valid_en~output_o $end
+$var wire 1 X! overw_hit_en~output_o $end
+$var wire 1 Y! next_rep_addr[0]~output_o $end
+$var wire 1 Z! next_rep_addr[1]~output_o $end
+$var wire 1 [! next_rep_addr[2]~output_o $end
+$var wire 1 \! next_rep_addr[3]~output_o $end
+$var wire 1 ]! next_rep_addr[4]~output_o $end
+$var wire 1 ^! next_rep_en~output_o $end
+$var wire 1 _! done~output_o $end
+$var wire 1 `! valid_bits[0]~input_o $end
+$var wire 1 a! hit_bits[0]~input_o $end
+$var wire 1 b! overw_valid_bits~0_combout $end
+$var wire 1 c! valid_bits[1]~input_o $end
+$var wire 1 d! hit_bits[1]~input_o $end
+$var wire 1 e! overw_valid_bits~1_combout $end
+$var wire 1 f! valid_bits[2]~input_o $end
+$var wire 1 g! hit_bits[2]~input_o $end
+$var wire 1 h! overw_valid_bits~2_combout $end
+$var wire 1 i! valid_bits[3]~input_o $end
+$var wire 1 j! hit_bits[3]~input_o $end
+$var wire 1 k! overw_valid_bits~3_combout $end
+$var wire 1 l! valid_bits[4]~input_o $end
+$var wire 1 m! hit_bits[4]~input_o $end
+$var wire 1 n! overw_valid_bits~4_combout $end
+$var wire 1 o! valid_bits[5]~input_o $end
+$var wire 1 p! hit_bits[5]~input_o $end
+$var wire 1 q! overw_valid_bits~5_combout $end
+$var wire 1 r! valid_bits[6]~input_o $end
+$var wire 1 s! hit_bits[6]~input_o $end
+$var wire 1 t! overw_valid_bits~6_combout $end
+$var wire 1 u! valid_bits[7]~input_o $end
+$var wire 1 v! hit_bits[7]~input_o $end
+$var wire 1 w! overw_valid_bits~7_combout $end
+$var wire 1 x! valid_bits[8]~input_o $end
+$var wire 1 y! hit_bits[8]~input_o $end
+$var wire 1 z! overw_valid_bits~8_combout $end
+$var wire 1 {! valid_bits[9]~input_o $end
+$var wire 1 |! hit_bits[9]~input_o $end
+$var wire 1 }! overw_valid_bits~9_combout $end
+$var wire 1 ~! valid_bits[10]~input_o $end
+$var wire 1 !" hit_bits[10]~input_o $end
+$var wire 1 "" overw_valid_bits~10_combout $end
+$var wire 1 #" valid_bits[11]~input_o $end
+$var wire 1 $" hit_bits[11]~input_o $end
+$var wire 1 %" overw_valid_bits~11_combout $end
+$var wire 1 &" valid_bits[12]~input_o $end
+$var wire 1 '" hit_bits[12]~input_o $end
+$var wire 1 (" overw_valid_bits~12_combout $end
+$var wire 1 )" valid_bits[13]~input_o $end
+$var wire 1 *" hit_bits[13]~input_o $end
+$var wire 1 +" overw_valid_bits~13_combout $end
+$var wire 1 ," valid_bits[14]~input_o $end
+$var wire 1 -" hit_bits[14]~input_o $end
+$var wire 1 ." overw_valid_bits~14_combout $end
+$var wire 1 /" valid_bits[15]~input_o $end
+$var wire 1 0" hit_bits[15]~input_o $end
+$var wire 1 1" overw_valid_bits~15_combout $end
+$var wire 1 2" valid_bits[16]~input_o $end
+$var wire 1 3" hit_bits[16]~input_o $end
+$var wire 1 4" overw_valid_bits~16_combout $end
+$var wire 1 5" valid_bits[17]~input_o $end
+$var wire 1 6" hit_bits[17]~input_o $end
+$var wire 1 7" overw_valid_bits~17_combout $end
+$var wire 1 8" valid_bits[18]~input_o $end
+$var wire 1 9" hit_bits[18]~input_o $end
+$var wire 1 :" overw_valid_bits~18_combout $end
+$var wire 1 ;" valid_bits[19]~input_o $end
+$var wire 1 <" hit_bits[19]~input_o $end
+$var wire 1 =" overw_valid_bits~19_combout $end
+$var wire 1 >" valid_bits[20]~input_o $end
+$var wire 1 ?" hit_bits[20]~input_o $end
+$var wire 1 @" overw_valid_bits~20_combout $end
+$var wire 1 A" valid_bits[21]~input_o $end
+$var wire 1 B" hit_bits[21]~input_o $end
+$var wire 1 C" overw_valid_bits~21_combout $end
+$var wire 1 D" valid_bits[22]~input_o $end
+$var wire 1 E" hit_bits[22]~input_o $end
+$var wire 1 F" overw_valid_bits~22_combout $end
+$var wire 1 G" valid_bits[23]~input_o $end
+$var wire 1 H" hit_bits[23]~input_o $end
+$var wire 1 I" overw_valid_bits~23_combout $end
+$var wire 1 J" valid_bits[24]~input_o $end
+$var wire 1 K" hit_bits[24]~input_o $end
+$var wire 1 L" overw_valid_bits~24_combout $end
+$var wire 1 M" valid_bits[25]~input_o $end
+$var wire 1 N" hit_bits[25]~input_o $end
+$var wire 1 O" overw_valid_bits~25_combout $end
+$var wire 1 P" valid_bits[26]~input_o $end
+$var wire 1 Q" hit_bits[26]~input_o $end
+$var wire 1 R" overw_valid_bits~26_combout $end
+$var wire 1 S" valid_bits[27]~input_o $end
+$var wire 1 T" hit_bits[27]~input_o $end
+$var wire 1 U" overw_valid_bits~27_combout $end
+$var wire 1 V" valid_bits[28]~input_o $end
+$var wire 1 W" hit_bits[28]~input_o $end
+$var wire 1 X" overw_valid_bits~28_combout $end
+$var wire 1 Y" valid_bits[29]~input_o $end
+$var wire 1 Z" hit_bits[29]~input_o $end
+$var wire 1 [" overw_valid_bits~29_combout $end
+$var wire 1 \" valid_bits[30]~input_o $end
+$var wire 1 ]" hit_bits[30]~input_o $end
+$var wire 1 ^" overw_valid_bits~30_combout $end
+$var wire 1 _" valid_bits[31]~input_o $end
+$var wire 1 `" hit_bits[31]~input_o $end
+$var wire 1 a" overw_valid_bits~31_combout $end
+$var wire 1 b" clk~input_o $end
+$var wire 1 c" start~input_o $end
+$var wire 1 d" reset~input_o $end
+$var wire 1 e" state_reg.clean_hit_file~q $end
+$var wire 1 f" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout $end
+$var wire 1 g" big_counter_inst|LPM_COUNTER_component|auto_generated|_~0_combout $end
+$var wire 1 h" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT $end
+$var wire 1 i" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1~sumout $end
+$var wire 1 j" Equal62~0_combout $end
+$var wire 1 k" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT $end
+$var wire 1 l" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2~sumout $end
+$var wire 1 m" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT $end
+$var wire 1 n" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3~sumout $end
+$var wire 1 o" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT $end
+$var wire 1 p" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4~sumout $end
+$var wire 1 q" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT $end
+$var wire 1 r" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5~sumout $end
+$var wire 1 s" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT $end
+$var wire 1 t" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6~sumout $end
+$var wire 1 u" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT $end
+$var wire 1 v" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7~sumout $end
+$var wire 1 w" Equal62~1_combout $end
+$var wire 1 x" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT $end
+$var wire 1 y" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8~sumout $end
+$var wire 1 z" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT $end
+$var wire 1 {" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9~sumout $end
+$var wire 1 |" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT $end
+$var wire 1 }" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10~sumout $end
+$var wire 1 ~" big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10~COUT $end
+$var wire 1 !# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11~sumout $end
+$var wire 1 "# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11~COUT $end
+$var wire 1 ## big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12~sumout $end
+$var wire 1 $# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12~COUT $end
+$var wire 1 %# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13~sumout $end
+$var wire 1 &# Equal62~2_combout $end
+$var wire 1 '# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13~COUT $end
+$var wire 1 (# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14~sumout $end
+$var wire 1 )# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14~COUT $end
+$var wire 1 *# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15~sumout $end
+$var wire 1 +# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15~COUT $end
+$var wire 1 ,# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16~sumout $end
+$var wire 1 -# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16~COUT $end
+$var wire 1 .# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17~sumout $end
+$var wire 1 /# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17~COUT $end
+$var wire 1 0# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18~sumout $end
+$var wire 1 1# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18~COUT $end
+$var wire 1 2# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19~sumout $end
+$var wire 1 3# Equal62~3_combout $end
+$var wire 1 4# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19~COUT $end
+$var wire 1 5# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20~sumout $end
+$var wire 1 6# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20~COUT $end
+$var wire 1 7# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21~sumout $end
+$var wire 1 8# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21~COUT $end
+$var wire 1 9# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22~sumout $end
+$var wire 1 :# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22~COUT $end
+$var wire 1 ;# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23~sumout $end
+$var wire 1 <# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23~COUT $end
+$var wire 1 =# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24~sumout $end
+$var wire 1 ># big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24~COUT $end
+$var wire 1 ?# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~sumout $end
+$var wire 1 @# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~COUT $end
+$var wire 1 A# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita26~sumout $end
+$var wire 1 B# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita26~COUT $end
+$var wire 1 C# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita27~sumout $end
+$var wire 1 D# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita27~COUT $end
+$var wire 1 E# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita28~sumout $end
+$var wire 1 F# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita28~COUT $end
+$var wire 1 G# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita29~sumout $end
+$var wire 1 H# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita29~COUT $end
+$var wire 1 I# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita30~sumout $end
+$var wire 1 J# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita30~COUT $end
+$var wire 1 K# big_counter_inst|LPM_COUNTER_component|auto_generated|counter_comb_bita31~sumout $end
+$var wire 1 L# Equal62~4_combout $end
+$var wire 1 M# Equal62~5_combout $end
+$var wire 1 N# Equal62~6_combout $end
+$var wire 1 O# Selector1~0_combout $end
+$var wire 1 P# state_reg.finished~q $end
+$var wire 1 Q# Selector0~0_combout $end
+$var wire 1 R# state_reg.initial~q $end
+$var wire 1 S# state_next.update_replacement~0_combout $end
+$var wire 1 T# state_reg.update_replacement~q $end
+$var wire 1 U# state_next.clean_valid_file~0_combout $end
+$var wire 1 V# state_reg.clean_valid_file~q $end
+$var wire 1 W# hit_bit_decoder_inst|one_low[4]~0_combout $end
+$var wire 1 X# Equal39~0_combout $end
+$var wire 1 Y# next_rep_addr~0_combout $end
+$var wire 1 Z# Equal42~0_combout $end
+$var wire 1 [# Equal42~1_combout $end
+$var wire 1 \# Equal43~0_combout $end
+$var wire 1 ]# next_rep_addr~1_combout $end
+$var wire 1 ^# next_rep_addr~2_combout $end
+$var wire 1 _# next_rep_addr~3_combout $end
+$var wire 1 `# next_rep_addr~4_combout $end
+$var wire 1 a# next_rep_addr~5_combout $end
+$var wire 1 b# next_rep_addr~6_combout $end
+$var wire 1 c# Equal60~0_combout $end
+$var wire 1 d# Equal54~0_combout $end
+$var wire 1 e# Equal49~0_combout $end
+$var wire 1 f# Equal49~1_combout $end
+$var wire 1 g# Equal35~0_combout $end
+$var wire 1 h# Equal35~1_combout $end
+$var wire 1 i# Equal35~2_combout $end
+$var wire 1 j# Equal43~1_combout $end
+$var wire 1 k# Equal43~2_combout $end
+$var wire 1 l# next_rep_addr~7_combout $end
+$var wire 1 m# Equal38~0_combout $end
+$var wire 1 n# Equal45~0_combout $end
+$var wire 1 o# Equal35~3_combout $end
+$var wire 1 p# Equal36~0_combout $end
+$var wire 1 q# Equal39~1_combout $end
+$var wire 1 r# Equal39~2_combout $end
+$var wire 1 s# Equal41~0_combout $end
+$var wire 1 t# Equal41~1_combout $end
+$var wire 1 u# Equal43~3_combout $end
+$var wire 1 v# Equal43~4_combout $end
+$var wire 1 w# Equal46~0_combout $end
+$var wire 1 x# Equal35~4_combout $end
+$var wire 1 y# Equal32~0_combout $end
+$var wire 1 z# Equal32~1_combout $end
+$var wire 1 {# Equal32~2_combout $end
+$var wire 1 |# Equal33~0_combout $end
+$var wire 1 }# Equal37~0_combout $end
+$var wire 1 ~# Equal35~5_combout $end
+$var wire 1 !$ Equal35~6_combout $end
+$var wire 1 "$ Equal35~7_combout $end
+$var wire 1 #$ next_rep_addr~8_combout $end
+$var wire 1 $$ valid_bit_decoder_inst|Equal0~0_combout $end
+$var wire 1 %$ valid_bit_decoder_inst|one_low[9]~0_combout $end
+$var wire 1 &$ valid_bit_decoder_inst|one_low[13]~1_combout $end
+$var wire 1 '$ valid_bit_decoder_inst|one_low[16]~2_combout $end
+$var wire 1 ($ valid_bit_decoder_inst|one_low[21]~3_combout $end
+$var wire 1 )$ valid_bit_decoder_inst|one_low[27]~4_combout $end
+$var wire 1 *$ valid_bit_decoder_inst|Equal0~1_combout $end
+$var wire 1 +$ valid_bit_decoder_inst|Equal0~2_combout $end
+$var wire 1 ,$ next_rep_addr~9_combout $end
+$var wire 1 -$ next_rep_addr~10_combout $end
+$var wire 1 .$ next_rep_addr~11_combout $end
+$var wire 1 /$ Equal47~0_combout $end
+$var wire 1 0$ Equal47~1_combout $end
+$var wire 1 1$ Equal47~2_combout $end
+$var wire 1 2$ Equal49~2_combout $end
+$var wire 1 3$ Equal49~3_combout $end
+$var wire 1 4$ Equal49~4_combout $end
+$var wire 1 5$ next_rep_addr~12_combout $end
+$var wire 1 6$ Equal53~0_combout $end
+$var wire 1 7$ Equal49~5_combout $end
+$var wire 1 8$ next_rep_addr~13_combout $end
+$var wire 1 9$ Equal51~0_combout $end
+$var wire 1 :$ next_rep_addr~14_combout $end
+$var wire 1 ;$ hit_bit_decoder_inst|one_low[27]~1_combout $end
+$var wire 1 <$ Equal55~0_combout $end
+$var wire 1 =$ Equal58~0_combout $end
+$var wire 1 >$ Equal59~0_combout $end
+$var wire 1 ?$ Equal59~1_combout $end
+$var wire 1 @$ Equal60~1_combout $end
+$var wire 1 A$ Equal61~0_combout $end
+$var wire 1 B$ Equal54~1_combout $end
+$var wire 1 C$ Equal55~1_combout $end
+$var wire 1 D$ Equal56~0_combout $end
+$var wire 1 E$ Equal56~1_combout $end
+$var wire 1 F$ Equal57~0_combout $end
+$var wire 1 G$ next_rep_addr~15_combout $end
+$var wire 1 H$ valid_bit_decoder_inst|one_low[4]~5_combout $end
+$var wire 1 I$ Equal8~0_combout $end
+$var wire 1 J$ Equal29~0_combout $end
+$var wire 1 K$ Equal23~0_combout $end
+$var wire 1 L$ Equal18~0_combout $end
+$var wire 1 M$ Equal16~0_combout $end
+$var wire 1 N$ Equal18~1_combout $end
+$var wire 1 O$ Equal4~0_combout $end
+$var wire 1 P$ valid_bit_decoder_inst|one_low[20]~6_combout $end
+$var wire 1 Q$ Equal4~1_combout $end
+$var wire 1 R$ valid_bit_decoder_inst|one_low[14]~7_combout $end
+$var wire 1 S$ Equal4~2_combout $end
+$var wire 1 T$ Equal10~0_combout $end
+$var wire 1 U$ Equal8~1_combout $end
+$var wire 1 V$ Equal8~2_combout $end
+$var wire 1 W$ Equal11~0_combout $end
+$var wire 1 X$ Equal11~1_combout $end
+$var wire 1 Y$ Equal12~0_combout $end
+$var wire 1 Z$ Equal12~1_combout $end
+$var wire 1 [$ Equal12~2_combout $end
+$var wire 1 \$ Equal12~3_combout $end
+$var wire 1 ]$ Equal15~0_combout $end
+$var wire 1 ^$ Equal4~3_combout $end
+$var wire 1 _$ Equal1~0_combout $end
+$var wire 1 `$ Equal1~1_combout $end
+$var wire 1 a$ Equal1~2_combout $end
+$var wire 1 b$ Equal2~0_combout $end
+$var wire 1 c$ next_rep_addr~16_combout $end
+$var wire 1 d$ Equal4~4_combout $end
+$var wire 1 e$ Equal4~5_combout $end
+$var wire 1 f$ Equal4~6_combout $end
+$var wire 1 g$ Equal7~0_combout $end
+$var wire 1 h$ Equal14~0_combout $end
+$var wire 1 i$ next_rep_addr~17_combout $end
+$var wire 1 j$ Equal5~0_combout $end
+$var wire 1 k$ Equal6~0_combout $end
+$var wire 1 l$ Equal10~1_combout $end
+$var wire 1 m$ Equal10~2_combout $end
+$var wire 1 n$ next_rep_addr~18_combout $end
+$var wire 1 o$ valid_bit_decoder_inst|one_low[27]~8_combout $end
+$var wire 1 p$ valid_bit_decoder_inst|Equal0~3_combout $end
+$var wire 1 q$ Equal18~2_combout $end
+$var wire 1 r$ Equal18~3_combout $end
+$var wire 1 s$ Equal24~0_combout $end
+$var wire 1 t$ Equal27~0_combout $end
+$var wire 1 u$ Equal29~1_combout $end
+$var wire 1 v$ Equal28~0_combout $end
+$var wire 1 w$ Equal28~1_combout $end
+$var wire 1 x$ next_rep_addr~19_combout $end
+$var wire 1 y$ Equal16~1_combout $end
+$var wire 1 z$ Equal16~2_combout $end
+$var wire 1 {$ Equal16~3_combout $end
+$var wire 1 |$ valid_bit_decoder_inst|one_low[23]~9_combout $end
+$var wire 1 }$ Equal24~1_combout $end
+$var wire 1 ~$ Equal24~2_combout $end
+$var wire 1 !% Equal25~0_combout $end
+$var wire 1 "% Equal25~1_combout $end
+$var wire 1 #% Equal26~0_combout $end
+$var wire 1 $% Equal18~4_combout $end
+$var wire 1 %% Equal22~0_combout $end
+$var wire 1 &% Equal18~5_combout $end
+$var wire 1 '% Equal20~0_combout $end
+$var wire 1 (% Equal20~1_combout $end
+$var wire 1 )% next_rep_addr~20_combout $end
+$var wire 1 *% next_rep_addr~21_combout $end
+$var wire 1 +% next_rep_addr~22_combout $end
+$var wire 1 ,% Equal38~1_combout $end
+$var wire 1 -% next_rep_addr~51_combout $end
+$var wire 1 .% Equal32~3_combout $end
+$var wire 1 /% Equal32~4_combout $end
+$var wire 1 0% Equal48~0_combout $end
+$var wire 1 1% next_rep_addr~23_combout $end
+$var wire 1 2% Equal40~0_combout $end
+$var wire 1 3% next_rep_addr~24_combout $end
+$var wire 1 4% Equal44~0_combout $end
+$var wire 1 5% Equal36~1_combout $end
+$var wire 1 6% Equal60~2_combout $end
+$var wire 1 7% Equal52~0_combout $end
+$var wire 1 8% Equal52~1_combout $end
+$var wire 1 9% next_rep_addr~25_combout $end
+$var wire 1 :% next_rep_addr~26_combout $end
+$var wire 1 ;% Equal1~3_combout $end
+$var wire 1 <% Equal1~4_combout $end
+$var wire 1 =% Equal1~5_combout $end
+$var wire 1 >% Equal17~0_combout $end
+$var wire 1 ?% next_rep_addr~27_combout $end
+$var wire 1 @% Equal5~1_combout $end
+$var wire 1 A% Equal21~0_combout $end
+$var wire 1 B% next_rep_addr~28_combout $end
+$var wire 1 C% next_rep_addr~29_combout $end
+$var wire 1 D% next_rep_addr~50_combout $end
+$var wire 1 E% Equal9~0_combout $end
+$var wire 1 F% next_rep_addr~30_combout $end
+$var wire 1 G% next_rep_addr~31_combout $end
+$var wire 1 H% Equal13~0_combout $end
+$var wire 1 I% Equal13~1_combout $end
+$var wire 1 J% next_rep_addr~32_combout $end
+$var wire 1 K% next_rep_addr~33_combout $end
+$var wire 1 L% Equal42~2_combout $end
+$var wire 1 M% Equal49~6_combout $end
+$var wire 1 N% Equal50~0_combout $end
+$var wire 1 O% Equal58~1_combout $end
+$var wire 1 P% next_rep_addr~34_combout $end
+$var wire 1 Q% next_rep_addr~35_combout $end
+$var wire 1 R% Equal19~0_combout $end
+$var wire 1 S% Equal19~1_combout $end
+$var wire 1 T% next_rep_addr~36_combout $end
+$var wire 1 U% next_rep_addr~37_combout $end
+$var wire 1 V% Equal27~1_combout $end
+$var wire 1 W% next_rep_addr~38_combout $end
+$var wire 1 X% Equal11~2_combout $end
+$var wire 1 Y% next_rep_addr~39_combout $end
+$var wire 1 Z% next_rep_addr~40_combout $end
+$var wire 1 [% Equal38~2_combout $end
+$var wire 1 \% next_rep_addr~41_combout $end
+$var wire 1 ]% next_rep_addr~42_combout $end
+$var wire 1 ^% Equal54~2_combout $end
+$var wire 1 _% Equal54~3_combout $end
+$var wire 1 `% next_rep_addr~43_combout $end
+$var wire 1 a% Equal7~1_combout $end
+$var wire 1 b% Equal7~2_combout $end
+$var wire 1 c% Equal23~1_combout $end
+$var wire 1 d% Equal23~2_combout $end
+$var wire 1 e% Equal23~3_combout $end
+$var wire 1 f% next_rep_addr~44_combout $end
+$var wire 1 g% next_rep_addr~45_combout $end
+$var wire 1 h% Equal46~1_combout $end
+$var wire 1 i% next_rep_addr~46_combout $end
+$var wire 1 j% Equal5~2_combout $end
+$var wire 1 k% Equal9~1_combout $end
+$var wire 1 l% Equal15~1_combout $end
+$var wire 1 m% Equal15~2_combout $end
+$var wire 1 n% next_rep_addr~47_combout $end
+$var wire 1 o% next_rep_addr~48_combout $end
+$var wire 1 p% next_rep_addr~49_combout $end
+$var wire 1 q% next_rep_en~0_combout $end
+$var wire 1 r% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [31] $end
+$var wire 1 s% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [30] $end
+$var wire 1 t% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [29] $end
+$var wire 1 u% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [28] $end
+$var wire 1 v% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [27] $end
+$var wire 1 w% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [26] $end
+$var wire 1 x% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [25] $end
+$var wire 1 y% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [24] $end
+$var wire 1 z% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [23] $end
+$var wire 1 {% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [22] $end
+$var wire 1 |% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [21] $end
+$var wire 1 }% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [20] $end
+$var wire 1 ~% big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [19] $end
+$var wire 1 !& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [18] $end
+$var wire 1 "& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [17] $end
+$var wire 1 #& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [16] $end
+$var wire 1 $& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [15] $end
+$var wire 1 %& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [14] $end
+$var wire 1 && big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [13] $end
+$var wire 1 '& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [12] $end
+$var wire 1 (& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [11] $end
+$var wire 1 )& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [10] $end
+$var wire 1 *& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [9] $end
+$var wire 1 +& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [8] $end
+$var wire 1 ,& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [7] $end
+$var wire 1 -& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [6] $end
+$var wire 1 .& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [5] $end
+$var wire 1 /& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [4] $end
+$var wire 1 0& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [3] $end
+$var wire 1 1& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] $end
+$var wire 1 2& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1] $end
+$var wire 1 3& big_counter_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0] $end
+$var wire 1 4& hit_bit_decoder_inst|one_low [31] $end
+$var wire 1 5& hit_bit_decoder_inst|one_low [30] $end
+$var wire 1 6& hit_bit_decoder_inst|one_low [29] $end
+$var wire 1 7& hit_bit_decoder_inst|one_low [28] $end
+$var wire 1 8& hit_bit_decoder_inst|one_low [27] $end
+$var wire 1 9& hit_bit_decoder_inst|one_low [26] $end
+$var wire 1 :& hit_bit_decoder_inst|one_low [25] $end
+$var wire 1 ;& hit_bit_decoder_inst|one_low [24] $end
+$var wire 1 <& hit_bit_decoder_inst|one_low [23] $end
+$var wire 1 =& hit_bit_decoder_inst|one_low [22] $end
+$var wire 1 >& hit_bit_decoder_inst|one_low [21] $end
+$var wire 1 ?& hit_bit_decoder_inst|one_low [20] $end
+$var wire 1 @& hit_bit_decoder_inst|one_low [19] $end
+$var wire 1 A& hit_bit_decoder_inst|one_low [18] $end
+$var wire 1 B& hit_bit_decoder_inst|one_low [17] $end
+$var wire 1 C& hit_bit_decoder_inst|one_low [16] $end
+$var wire 1 D& hit_bit_decoder_inst|one_low [15] $end
+$var wire 1 E& hit_bit_decoder_inst|one_low [14] $end
+$var wire 1 F& hit_bit_decoder_inst|one_low [13] $end
+$var wire 1 G& hit_bit_decoder_inst|one_low [12] $end
+$var wire 1 H& hit_bit_decoder_inst|one_low [11] $end
+$var wire 1 I& hit_bit_decoder_inst|one_low [10] $end
+$var wire 1 J& hit_bit_decoder_inst|one_low [9] $end
+$var wire 1 K& hit_bit_decoder_inst|one_low [8] $end
+$var wire 1 L& hit_bit_decoder_inst|one_low [7] $end
+$var wire 1 M& hit_bit_decoder_inst|one_low [6] $end
+$var wire 1 N& hit_bit_decoder_inst|one_low [5] $end
+$var wire 1 O& hit_bit_decoder_inst|one_low [4] $end
+$var wire 1 P& hit_bit_decoder_inst|one_low [3] $end
+$var wire 1 Q& hit_bit_decoder_inst|one_low [2] $end
+$var wire 1 R& hit_bit_decoder_inst|one_low [1] $end
+$var wire 1 S& hit_bit_decoder_inst|one_low [0] $end
+$var wire 1 T& valid_bit_decoder_inst|one_low [31] $end
+$var wire 1 U& valid_bit_decoder_inst|one_low [30] $end
+$var wire 1 V& valid_bit_decoder_inst|one_low [29] $end
+$var wire 1 W& valid_bit_decoder_inst|one_low [28] $end
+$var wire 1 X& valid_bit_decoder_inst|one_low [27] $end
+$var wire 1 Y& valid_bit_decoder_inst|one_low [26] $end
+$var wire 1 Z& valid_bit_decoder_inst|one_low [25] $end
+$var wire 1 [& valid_bit_decoder_inst|one_low [24] $end
+$var wire 1 \& valid_bit_decoder_inst|one_low [23] $end
+$var wire 1 ]& valid_bit_decoder_inst|one_low [22] $end
+$var wire 1 ^& valid_bit_decoder_inst|one_low [21] $end
+$var wire 1 _& valid_bit_decoder_inst|one_low [20] $end
+$var wire 1 `& valid_bit_decoder_inst|one_low [19] $end
+$var wire 1 a& valid_bit_decoder_inst|one_low [18] $end
+$var wire 1 b& valid_bit_decoder_inst|one_low [17] $end
+$var wire 1 c& valid_bit_decoder_inst|one_low [16] $end
+$var wire 1 d& valid_bit_decoder_inst|one_low [15] $end
+$var wire 1 e& valid_bit_decoder_inst|one_low [14] $end
+$var wire 1 f& valid_bit_decoder_inst|one_low [13] $end
+$var wire 1 g& valid_bit_decoder_inst|one_low [12] $end
+$var wire 1 h& valid_bit_decoder_inst|one_low [11] $end
+$var wire 1 i& valid_bit_decoder_inst|one_low [10] $end
+$var wire 1 j& valid_bit_decoder_inst|one_low [9] $end
+$var wire 1 k& valid_bit_decoder_inst|one_low [8] $end
+$var wire 1 l& valid_bit_decoder_inst|one_low [7] $end
+$var wire 1 m& valid_bit_decoder_inst|one_low [6] $end
+$var wire 1 n& valid_bit_decoder_inst|one_low [5] $end
+$var wire 1 o& valid_bit_decoder_inst|one_low [4] $end
+$var wire 1 p& valid_bit_decoder_inst|one_low [3] $end
+$var wire 1 q& valid_bit_decoder_inst|one_low [2] $end
+$var wire 1 r& valid_bit_decoder_inst|one_low [1] $end
+$var wire 1 s& valid_bit_decoder_inst|one_low [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b11110000000000000000000000001111 "
+1#
+0$
+b11111111111111111111111111111111 %
+0&
+0+
+0*
+1)
+0(
+0'
+0,
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0M
+1m
+1l
+1k
+1j
+0i
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+1Q
+1P
+1O
+1N
+0n
+0o
+1p
+xq
+1r
+1s
+1t
+1u
+1v
+1w
+1x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+13!
+14!
+15!
+16!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0G!
+0H!
+0I!
+0J!
+0K!
+0L!
+0M!
+0N!
+0O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+0U!
+0V!
+0W!
+0X!
+0Y!
+0Z!
+1[!
+0\!
+0]!
+0^!
+0_!
+1`!
+1a!
+1b!
+1c!
+1d!
+1e!
+1f!
+1g!
+1h!
+1i!
+1j!
+1k!
+1l!
+0m!
+0n!
+1o!
+0p!
+0q!
+1r!
+0s!
+0t!
+1u!
+0v!
+0w!
+1x!
+0y!
+0z!
+1{!
+0|!
+0}!
+1~!
+0!"
+0""
+1#"
+0$"
+0%"
+1&"
+0'"
+0("
+1)"
+0*"
+0+"
+1,"
+0-"
+0."
+1/"
+00"
+01"
+12"
+03"
+04"
+15"
+06"
+07"
+18"
+09"
+0:"
+1;"
+0<"
+0="
+1>"
+0?"
+0@"
+1A"
+0B"
+0C"
+1D"
+0E"
+0F"
+1G"
+0H"
+0I"
+1J"
+0K"
+0L"
+1M"
+0N"
+0O"
+1P"
+0Q"
+0R"
+1S"
+0T"
+0U"
+1V"
+1W"
+1X"
+1Y"
+1Z"
+1["
+1\"
+1]"
+1^"
+1_"
+1`"
+1a"
+0b"
+0c"
+1d"
+0e"
+1f"
+0g"
+0h"
+1i"
+1j"
+0k"
+1l"
+0m"
+1n"
+0o"
+1p"
+0q"
+1r"
+0s"
+1t"
+0u"
+1v"
+1w"
+0x"
+1y"
+0z"
+1{"
+0|"
+1}"
+0~"
+1!#
+0"#
+1##
+0$#
+1%#
+1&#
+0'#
+1(#
+0)#
+1*#
+0+#
+1,#
+0-#
+1.#
+0/#
+10#
+01#
+12#
+13#
+04#
+15#
+06#
+17#
+08#
+19#
+0:#
+1;#
+0<#
+1=#
+0>#
+1?#
+0@#
+1A#
+0B#
+1C#
+0D#
+1E#
+0F#
+1G#
+0H#
+1I#
+0J#
+1K#
+1L#
+1M#
+1N#
+0O#
+0P#
+0Q#
+0R#
+0S#
+0T#
+0U#
+0V#
+1W#
+0X#
+0Y#
+0Z#
+0[#
+0\#
+0]#
+0^#
+0_#
+0`#
+0a#
+0b#
+0c#
+0d#
+1e#
+0f#
+1g#
+1h#
+1i#
+1j#
+0k#
+0l#
+0m#
+0n#
+0o#
+1p#
+0q#
+0r#
+0s#
+0t#
+0u#
+0v#
+0w#
+1x#
+1y#
+0z#
+1{#
+0|#
+0}#
+0~#
+1!$
+1"$
+0#$
+1$$
+1%$
+1&$
+1'$
+1($
+1)$
+1*$
+1+$
+1,$
+0-$
+0.$
+0/$
+00$
+01$
+02$
+03$
+04$
+05$
+06$
+07$
+08$
+09$
+1:$
+0;$
+0<$
+0=$
+0>$
+0?$
+0@$
+0A$
+1B$
+0C$
+0D$
+0E$
+0F$
+1G$
+1H$
+1I$
+0J$
+0K$
+1L$
+1M$
+0N$
+1O$
+1P$
+1Q$
+1R$
+0S$
+1T$
+0U$
+0V$
+0W$
+1X$
+1Y$
+1Z$
+1[$
+0\$
+0]$
+1^$
+1_$
+0`$
+1a$
+0b$
+0c$
+0d$
+0e$
+0f$
+0g$
+0h$
+0i$
+1j$
+0k$
+1l$
+0m$
+0n$
+1o$
+1p$
+1q$
+1r$
+1s$
+1t$
+1u$
+1v$
+0w$
+1x$
+1y$
+1z$
+0{$
+1|$
+0}$
+0~$
+1!%
+1"%
+0#%
+1$%
+0%%
+0&%
+0'%
+0(%
+1)%
+1*%
+0+%
+1,%
+1-%
+1.%
+0/%
+00%
+01%
+02%
+13%
+04%
+05%
+06%
+17%
+08%
+09%
+0:%
+1;%
+0<%
+0=%
+0>%
+0?%
+0@%
+0A%
+0B%
+1C%
+1D%
+0E%
+1F%
+1G%
+0H%
+0I%
+1J%
+0K%
+0L%
+0M%
+0N%
+0O%
+1P%
+1Q%
+0R%
+0S%
+1T%
+0U%
+0V%
+1W%
+0X%
+1Y%
+1Z%
+0[%
+0\%
+1]%
+0^%
+0_%
+1`%
+0a%
+0b%
+0c%
+0d%
+0e%
+1f%
+0g%
+0h%
+1i%
+0j%
+0k%
+0l%
+0m%
+0n%
+1o%
+0p%
+0q%
+03&
+02&
+01&
+00&
+0/&
+0.&
+0-&
+0,&
+0+&
+0*&
+0)&
+0(&
+0'&
+0&&
+0%&
+0$&
+0#&
+0"&
+0!&
+0~%
+0}%
+0|%
+0{%
+0z%
+0y%
+0x%
+0w%
+0v%
+0u%
+0t%
+0s%
+0r%
+zS&
+zR&
+0Q&
+0P&
+zO&
+0N&
+zM&
+zL&
+0K&
+zJ&
+zI&
+zH&
+0G&
+0F&
+zE&
+0D&
+0C&
+0B&
+0A&
+0@&
+0?&
+z>&
+z=&
+z<&
+z;&
+z:&
+z9&
+z8&
+z7&
+z6&
+z5&
+z4&
+zs&
+zr&
+0q&
+0p&
+zo&
+0n&
+zm&
+zl&
+0k&
+zj&
+zi&
+zh&
+0g&
+0f&
+ze&
+zd&
+zc&
+zb&
+za&
+z`&
+0_&
+z^&
+z]&
+z\&
+z[&
+zZ&
+zY&
+zX&
+zW&
+zV&
+0U&
+zT&
+$end
+#10000
+1!
+1b"
+#20000
+0!
+0b"
+#30000
+1!
+1b"
+#40000
+0#
+0!
+0d"
+0b"
+#50000
+1!
+1b"
+#60000
+1$
+0!
+1c"
+0b"
+1S#
+1Q#
+#70000
+1!
+1b"
+1T#
+1R#
+0S#
+1q%
+1U#
+1^!
+1,
+#80000
+0$
+0!
+0c"
+0b"
+#90000
+1!
+1b"
+0T#
+1V#
+1W!
+1n
+0q%
+0U#
+0^!
+0,
+#100000
+0!
+0b"
+#110000
+1!
+1b"
+0V#
+1e"
+1X!
+0W!
+1g"
+0n
+1M
+1O#
+#120000
+0!
+0b"
+#130000
+1!
+1b"
+1r%
+1s%
+1t%
+1u%
+1v%
+1w%
+1x%
+1y%
+1z%
+1{%
+1|%
+1}%
+1~%
+1!&
+1"&
+1#&
+1$&
+1%&
+1&&
+1'&
+1(&
+1)&
+1*&
+1+&
+1,&
+1-&
+1.&
+1/&
+10&
+11&
+12&
+13&
+1P#
+0e"
+0X!
+1_!
+0j"
+1h"
+1k"
+0w"
+1m"
+1o"
+1q"
+1s"
+1u"
+1x"
+0&#
+1z"
+1|"
+1~"
+1"#
+1$#
+1'#
+03#
+1)#
+1+#
+1-#
+1/#
+11#
+14#
+0M#
+16#
+18#
+1:#
+1<#
+1>#
+1@#
+0L#
+1B#
+1D#
+1F#
+1H#
+1J#
+0g"
+1&
+0M
+0f"
+0i"
+0l"
+0n"
+0p"
+0r"
+0t"
+0v"
+0y"
+0{"
+0}"
+0!#
+0##
+0%#
+0(#
+0*#
+0,#
+0.#
+00#
+02#
+05#
+07#
+09#
+0;#
+0=#
+0?#
+0A#
+0C#
+0E#
+0G#
+0I#
+0K#
+0O#
+0Q#
+0N#
+1i"
+1l"
+1n"
+1p"
+1r"
+1t"
+1v"
+1y"
+1{"
+1}"
+1!#
+1##
+1%#
+1(#
+1*#
+1,#
+1.#
+10#
+12#
+15#
+17#
+19#
+1;#
+1=#
+1?#
+1A#
+1C#
+1E#
+1G#
+1I#
+1K#
+1g"
+#140000
+0!
+0b"
+#150000
+1!
+1b"
+0R#
+03&
+0P#
+0_!
+0h"
+0&
+1f"
+0i"
+#160000
+0!
+0b"
+#170000
+1!
+1b"
+02&
+13&
+1h"
+0k"
+0f"
+1i"
+1k"
+0i"
+0l"
+1l"
+#180000
+0!
+0b"
+#190000
+1!
+1b"
+03&
+1j"
+0h"
+1f"
+0k"
+1i"
+0l"
+#200000
+1$
+0!
+1c"
+0b"
+1S#
+1Q#
+#210000
+1!
+1b"
+1T#
+1R#
+01&
+12&
+13&
+0j"
+1h"
+1k"
+0m"
+0f"
+0i"
+1l"
+0S#
+1q%
+1O#
+1^!
+1m"
+1,
+1i"
+0l"
+0n"
+1n"
+#220000
+0$
+0!
+0c"
+0b"
+#230000
+1!
+1b"
+0T#
+03&
+1P#
+1_!
+0h"
+1&
+1f"
+0q%
+0O#
+0Q#
+0^!
+0,
+0i"
+#240000
+0!
+0b"
+#250000
+1!
+1b"
+0R#
+02&
+13&
+0P#
+0_!
+1h"
+0k"
+0&
+0f"
+1i"
+1k"
+0m"
+0i"
+1l"
+1m"
+0l"
+0n"
+1n"
+#260000
+0!
+0b"
+#270000
+1!
+1b"
+03&
+1j"
+0h"
+1f"
+0k"
+1i"
+0m"
+1l"
+0n"
+#280000
+0!
+0b"
+#290000
+1!
+1b"
+00&
+11&
+12&
+13&
+0j"
+1h"
+1k"
+1m"
+0o"
+0f"
+0i"
+0l"
+1n"
+1o"
+1i"
+1l"
+0n"
+0p"
+1p"
+#300000

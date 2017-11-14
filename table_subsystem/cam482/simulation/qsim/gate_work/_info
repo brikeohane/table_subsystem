@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jld60/Documents/project_workspace/cam482/simulation/qsim
+vcam482
+Z1 !s110 1509415276
+!i10b 1
+!s100 <42E37XA5j>^;O2Z?hNFU3
+IEa2R:?f:fN6B<_1^I;kYF2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1509415274
+8cam482.vo
+Fcam482.vo
+L0 32
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+!s108 1509415275.000000
+!s107 cam482.vo|
+!s90 -work|work|cam482.vo|
+!i113 1
+Z4 o-work work
+vcam482_vlg_vec_tst
+R1
+!i10b 1
+!s100 _CbYE?HTD_ZHJjmk7VaSH2
+IbV4o;I;JTlkC4D<GZ@M^f1
+R2
+R0
+w1509415273
+8waveform.vwf.vt
+Fwaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+!s108 1509415276.000000
+!s107 waveform.vwf.vt|
+!s90 -work|work|waveform.vwf.vt|
+!i113 1
+R4

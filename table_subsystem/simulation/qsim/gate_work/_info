@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jld60/Documents/project_workspace/table_subsystem/simulation/qsim
+vtable_subsystem
+Z1 !s110 1509592469
+!i10b 1
+!s100 V6=Wjh_c4MIkRDe;zTDoz0
+IZmKP_gBgzo5L[^Om3cmFA0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1509592468
+8table_subsystem.vo
+Ftable_subsystem.vo
+L0 32
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1509592469.000000
+!s107 table_subsystem.vo|
+!s90 -work|work|table_subsystem.vo|
+!i113 1
+Z5 o-work work
+vtable_subsystem_vlg_vec_tst
+R1
+!i10b 1
+!s100 2K8]b<=><J[9SS=Hn6H:Y0
+ISe9Rf_c3``>mnA7PL6Ho71
+R2
+R0
+w1509592467
+8waveform.vwf.vt
+Fwaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 waveform.vwf.vt|
+!s90 -work|work|waveform.vwf.vt|
+!i113 1
+R5

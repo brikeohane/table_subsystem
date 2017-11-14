@@ -1,0 +1,73 @@
+library ieee;
+use ieee.std_logic_1164.all; 
+use ieee.numeric_std.all; 
+
+entity cam482 is
+	port(
+		clk, reset: 	in std_logic;
+		wr_en: 			in std_logic;
+		key_in: 		in std_logic_vector(47 downto 0);
+		data_in:		in std_logic_vector(1 downto 0);
+		data_out: 		out std_logic_vector(1 downto 0);
+		hit:			out std_logic;
+	);
+end cam482;
+
+architecture rtl of key_file is
+	component reg_file is
+		port(
+			clk, reset: 	in std_logic;
+			wr_en: 			in std_logic;
+			w_addr:			in std_logic_vector(4 downto 0);
+			w_data:			in std_logic_vector(1 downto 0);
+			r_addr:			in std_logic_vector(4 downto 0);		
+			r_data:			out std_logic_vector(1 downto 0);
+		);
+	end reg_file;
+
+	component key_file is
+		port(
+			clk, reset: 	in std_logic;
+			wr_en: 			in std_logic;
+			key_in: 		in std_logic_vector(47 downto 0);
+			hit: 			out std_logic;
+			addr_out: 		out std_logic_vector(4 downto 0)
+		);
+	end key_file;
+
+	signal addr_signal: std_logic_vector(4 downto 0);
+
+begin
+
+	reg_file_inst: reg_file
+	port map(
+		clk => 		clk,
+		reset => 	reset,
+		wr_en =>	wr_en,
+		w_addr =>	addr_signal,
+		w_data =>	data_in,
+		r_addr =>	addr_signal,
+		r_data => 	data_out
+	);
+
+	key_file_inst: key_file
+	port map(
+		clk =>		clk,
+		reset =>	reset,
+		wr_en =>	wr_en,
+		key_in =>	key_in,
+		hit =>		hit,
+		addr_out =>	addr_signal
+	);
+	
+end rtl;
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,222 @@
+library ieee;
+use ieee.std_logic_1164.all; 
+use ieee.numeric_std.all; 
+
+entity one_bit_reg_file is
+	port(
+		clk, reset: 	in std_logic;
+		wr_en: 			in std_logic;
+		w_addr:			in std_logic_vector(4 downto 0);
+		w_bit:			in std_logic_vector(1 downto 0);
+		r_addr:			in std_logic_vector(4 downto 0);		
+		r_bit:			out std_logic_vector(1 downto 0);
+		overwrite:		in std_logic_vector(31 downto 0);
+		overwrite_en:	in std_logic;
+		full_data:		out std_logic_vector(31 downto 0)
+	);
+end one_bit_reg_file;
+
+architecture rtl of one_bit_reg_file is
+	signal array_reg, array_next, en: std_logic_vector(31 downto 0);
+begin
+
+	REG: process(clk, reset)
+	begin
+		if(reset = '1') then
+			array_reg <= (others=>'0');
+		elsif(clk'event and clk='1') then
+			array_reg <= array_next;
+	end process;
+
+	W_DATA_FLOW: process(array_reg, en, w_bit, overwrite, overwrite_en)
+	begin
+		array_next <= array_reg;
+
+		if(en(0) = '1') then 
+			array_next(0) <= w_bit; 
+		end if;
+		if(en(1) = '1') then 
+			array_next(1) <= w_bit; 
+		end if;
+		if(en(2) = '1') then 
+			array_next(2) <= w_bit; 
+		end if;
+		if(en(3) = '1') then 
+			array_next(3) <= w_bit; 
+		end if;
+		if(en(4) = '1') then 
+			array_next(4) <= w_bit; 
+		end if;
+		if(en(5) = '1') then 
+			array_next(5) <= w_bit; 
+		end if;
+		if(en(6) = '1') then 
+			array_next(6) <= w_bit; 
+		end if;
+		if(en(7) = '1') then 
+			array_next(7) <= w_bit; 
+		end if;
+		if(en(8) = '1') then 
+			array_next(8) <= w_bit; 
+		end if;
+		if(en(9) = '1') then 
+			array_next(9) <= w_bit; 
+		end if;
+		if(en(10) = '1') then 
+			array_next(10) <= w_bit; 
+		end if;
+		if(en(11) = '1') then 
+			array_next(11) <= w_bit; 
+		end if;
+		if(en(12) = '1') then 
+			array_next(12) <= w_bit; 
+		end if;
+		if(en(13) = '1') then 
+			array_next(13) <= w_bit; 
+		end if;
+		if(en(14) = '1') then 
+			array_next(14) <= w_bit; 
+		end if;
+		if(en(15) = '1') then 
+			array_next(15) <= w_bit; 
+		end if;
+		if(en(16) = '1') then 
+			array_next(16) <= w_bit; 
+		end if;
+		if(en(17) = '1') then 
+			array_next(17) <= w_bit; 
+		end if;
+		if(en(18) = '1') then 
+			array_next(18) <= w_bit; 
+		end if;
+		if(en(19) = '1') then 
+			array_next(19) <= w_bit; 
+		end if;
+		if(en(20) = '1') then 
+			array_next(20) <= w_bit; 
+		end if;
+		if(en(21) = '1') then 
+			array_next(21) <= w_bit; 
+		end if;
+		if(en(22) = '1') then 
+			array_next(22) <= w_bit; 
+		end if;
+		if(en(23) = '1') then 
+			array_next(23) <= w_bit; 
+		end if;
+		if(en(24) = '1') then 
+			array_next(24) <= w_bit; 
+		end if;
+		if(en(25) = '1') then 
+			array_next(25) <= w_bit; 
+		end if;
+		if(en(26) = '1') then 
+			array_next(26) <= w_bit; 
+		end if;
+		if(en(27) = '1') then 
+			array_next(27) <= w_bit; 
+		end if;
+		if(en(28) = '1') then 
+			array_next(28) <= w_bit; 
+		end if;
+		if(en(29) = '1') then 
+			array_next(29) <= w_bit; 
+		end if;
+		if(en(30) = '1') then 
+			array_next(30) <= w_bit; 
+		end if;
+		if(en(31) = '1') then 
+			array_next(31) <= w_bit; 
+		end if;
+
+		if(overwrite_en = '1') then
+			array_next <= overwrite;
+		end if;
+	end process;
+
+	DECODE_WRITE_EN: process(wr_en, w_addr)
+	begin
+		if(wr_en = '0') then
+			en <= (others=>'0');
+		else
+			case w_addr is
+				when "00000" => 	en <= "00000000000000000000000000000001";
+				when "00001" => 	en <= "00000000000000000000000000000010";
+				when "00010" => 	en <= "00000000000000000000000000000100";
+				when "00011" => 	en <= "00000000000000000000000000001000";
+				when "00100" => 	en <= "00000000000000000000000000010000";
+				when "00101" => 	en <= "00000000000000000000000000100000";
+				when "00110" => 	en <= "00000000000000000000000001000000";
+				when "00111" => 	en <= "00000000000000000000000010000000";
+				when "01000" => 	en <= "00000000000000000000000100000000";
+				when "01001" => 	en <= "00000000000000000000001000000000";
+				when "01010" => 	en <= "00000000000000000000010000000000";
+				when "01011" => 	en <= "00000000000000000000100000000000";
+				when "01100" => 	en <= "00000000000000000001000000000000";
+				when "01101" => 	en <= "00000000000000000010000000000000";
+				when "01110" => 	en <= "00000000000000000100000000000000";
+				when "01111" => 	en <= "00000000000000001000000000000000";
+				when "10000" => 	en <= "00000000000000010000000000000000";
+				when "10001" => 	en <= "00000000000000100000000000000000";
+				when "10010" => 	en <= "00000000000001000000000000000000";
+				when "10011" => 	en <= "00000000000010000000000000000000";
+				when "10100" => 	en <= "00000000000100000000000000000000";
+				when "10101" => 	en <= "00000000001000000000000000000000";
+				when "10110" => 	en <= "00000000010000000000000000000000";
+				when "10111" => 	en <= "00000000100000000000000000000000";
+				when "11000" => 	en <= "00000001000000000000000000000000";
+				when "11001" => 	en <= "00000010000000000000000000000000";
+				when "11010" => 	en <= "00000100000000000000000000000000";
+				when "11011" => 	en <= "00001000000000000000000000000000";
+				when "11100" => 	en <= "00010000000000000000000000000000";
+				when "11101" => 	en <= "00100000000000000000000000000000";
+				when "11110" => 	en <= "01000000000000000000000000000000";
+				when "11111" => 	en <= "10000000000000000000000000000000";
+			end case;
+		end if;
+	end process;
+
+	with r_addr select
+		r_bit <=
+			array_reg(0) when "00000",
+			array_reg(1) when "00001",
+			array_reg(2) when "00010",
+			array_reg(3) when "00011",
+			array_reg(4) when "00100",
+			array_reg(5) when "00101",
+			array_reg(6) when "00110",
+			array_reg(7) when "00111",
+			array_reg(8) when "01000",
+			array_reg(9) when "01001",
+			array_reg(10) when "01010",
+			array_reg(11) when "01011",
+			array_reg(12) when "01100",
+			array_reg(13) when "01101",
+			array_reg(14) when "01110",
+			array_reg(15) when "01111",
+			array_reg(16) when "10000",
+			array_reg(17) when "10001",
+			array_reg(18) when "10010",
+			array_reg(19) when "10011",
+			array_reg(20) when "10100",
+			array_reg(21) when "10101",
+			array_reg(22) when "10110",
+			array_reg(23) when "10111",
+			array_reg(24) when "11000",
+			array_reg(25) when "11001",
+			array_reg(26) when "11010",
+			array_reg(27) when "11011",
+			array_reg(28) when "11100",
+			array_reg(29) when "11101",
+			array_reg(30) when "11110",
+			array_reg(31) when "11111";
+
+	full_data <= array_reg;
+end rtl;
+
+
+
+
+
+
+

@@ -1,0 +1,441 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "overw_valid_bits[0]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[1]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[2]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[3]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[4]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[5]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[6]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[7]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[8]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[9]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[10]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[11]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[12]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[13]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[14]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[15]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[16]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[17]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[18]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[19]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[20]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[21]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[22]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[23]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[24]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[25]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[26]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[27]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[28]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[29]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[30]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_bits[31]",
+					"strict" : false
+				},
+				{
+					"name" : "overw_valid_en",
+					"strict" : false
+				},
+				{
+					"name" : "overw_hit_en",
+					"strict" : false
+				},
+				{
+					"name" : "next_rep_addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "next_rep_addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "next_rep_addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "next_rep_addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "next_rep_addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "next_rep_en",
+					"strict" : false
+				},
+				{
+					"name" : "done",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[0]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[1]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[2]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[3]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[4]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[5]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[6]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[7]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[7]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[8]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[8]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[9]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[9]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[10]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[10]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[11]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[11]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[12]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[12]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[13]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[13]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[14]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[14]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[15]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[15]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[16]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[16]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[17]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[17]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[18]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[18]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[19]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[19]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[20]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[20]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[21]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[21]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[22]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[22]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[23]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[23]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[24]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[24]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[25]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[25]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[26]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[26]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[27]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[27]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[28]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[28]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[29]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[29]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[30]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[30]",
+					"strict" : false
+				},
+				{
+					"name" : "valid_bits[31]",
+					"strict" : false
+				},
+				{
+					"name" : "hit_bits[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

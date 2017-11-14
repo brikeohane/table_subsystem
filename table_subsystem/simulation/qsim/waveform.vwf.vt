@@ -1,0 +1,603 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/06/2017 20:54:07"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          table_subsystem
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module table_subsystem_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg [47:0] DA;
+reg [1:0] port_in;
+reg reset;
+reg [47:0] SA;
+reg start;
+// wires                                               
+wire broadcast;
+wire done;
+wire [1:0] port_out;
+
+// assign statements (if any)                          
+table_subsystem i1 (
+// port map - connection between master ports and signals/registers   
+	.broadcast(broadcast),
+	.clk(clk),
+	.DA(DA),
+	.done(done),
+	.port_in(port_in),
+	.port_out(port_out),
+	.reset(reset),
+	.SA(SA),
+	.start(start)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #10000 1'b1;
+	#10000;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b1;
+	reset = #40000 1'b0;
+end 
+
+// start
+initial
+begin
+	start = 1'b0;
+	start = #60000 1'b1;
+	start = #20000 1'b0;
+	start = #340000 1'b1;
+	start = #20000 1'b0;
+end 
+// DA[ 47 ]
+initial
+begin
+	DA[47] = 1'b0;
+	DA[47] = #60000 1'b1;
+	DA[47] = #20000 1'b0;
+	DA[47] = #340000 1'b1;
+	DA[47] = #20000 1'b0;
+end 
+// DA[ 46 ]
+initial
+begin
+	DA[46] = 1'b0;
+end 
+// DA[ 45 ]
+initial
+begin
+	DA[45] = 1'b0;
+	DA[45] = #60000 1'b1;
+	DA[45] = #20000 1'b0;
+	DA[45] = #340000 1'b1;
+	DA[45] = #20000 1'b0;
+end 
+// DA[ 44 ]
+initial
+begin
+	DA[44] = 1'b0;
+	DA[44] = #420000 1'b1;
+	DA[44] = #20000 1'b0;
+end 
+// DA[ 43 ]
+initial
+begin
+	DA[43] = 1'b0;
+end 
+// DA[ 42 ]
+initial
+begin
+	DA[42] = 1'b0;
+end 
+// DA[ 41 ]
+initial
+begin
+	DA[41] = 1'b0;
+end 
+// DA[ 40 ]
+initial
+begin
+	DA[40] = 1'b0;
+end 
+// DA[ 39 ]
+initial
+begin
+	DA[39] = 1'b0;
+end 
+// DA[ 38 ]
+initial
+begin
+	DA[38] = 1'b0;
+end 
+// DA[ 37 ]
+initial
+begin
+	DA[37] = 1'b0;
+end 
+// DA[ 36 ]
+initial
+begin
+	DA[36] = 1'b0;
+end 
+// DA[ 35 ]
+initial
+begin
+	DA[35] = 1'b0;
+end 
+// DA[ 34 ]
+initial
+begin
+	DA[34] = 1'b0;
+end 
+// DA[ 33 ]
+initial
+begin
+	DA[33] = 1'b0;
+end 
+// DA[ 32 ]
+initial
+begin
+	DA[32] = 1'b0;
+end 
+// DA[ 31 ]
+initial
+begin
+	DA[31] = 1'b0;
+end 
+// DA[ 30 ]
+initial
+begin
+	DA[30] = 1'b0;
+end 
+// DA[ 29 ]
+initial
+begin
+	DA[29] = 1'b0;
+end 
+// DA[ 28 ]
+initial
+begin
+	DA[28] = 1'b0;
+end 
+// DA[ 27 ]
+initial
+begin
+	DA[27] = 1'b0;
+end 
+// DA[ 26 ]
+initial
+begin
+	DA[26] = 1'b0;
+end 
+// DA[ 25 ]
+initial
+begin
+	DA[25] = 1'b0;
+end 
+// DA[ 24 ]
+initial
+begin
+	DA[24] = 1'b0;
+end 
+// DA[ 23 ]
+initial
+begin
+	DA[23] = 1'b0;
+end 
+// DA[ 22 ]
+initial
+begin
+	DA[22] = 1'b0;
+end 
+// DA[ 21 ]
+initial
+begin
+	DA[21] = 1'b0;
+end 
+// DA[ 20 ]
+initial
+begin
+	DA[20] = 1'b0;
+end 
+// DA[ 19 ]
+initial
+begin
+	DA[19] = 1'b0;
+end 
+// DA[ 18 ]
+initial
+begin
+	DA[18] = 1'b0;
+end 
+// DA[ 17 ]
+initial
+begin
+	DA[17] = 1'b0;
+end 
+// DA[ 16 ]
+initial
+begin
+	DA[16] = 1'b0;
+end 
+// DA[ 15 ]
+initial
+begin
+	DA[15] = 1'b0;
+end 
+// DA[ 14 ]
+initial
+begin
+	DA[14] = 1'b0;
+end 
+// DA[ 13 ]
+initial
+begin
+	DA[13] = 1'b0;
+end 
+// DA[ 12 ]
+initial
+begin
+	DA[12] = 1'b0;
+end 
+// DA[ 11 ]
+initial
+begin
+	DA[11] = 1'b0;
+end 
+// DA[ 10 ]
+initial
+begin
+	DA[10] = 1'b0;
+end 
+// DA[ 9 ]
+initial
+begin
+	DA[9] = 1'b0;
+end 
+// DA[ 8 ]
+initial
+begin
+	DA[8] = 1'b0;
+end 
+// DA[ 7 ]
+initial
+begin
+	DA[7] = 1'b0;
+end 
+// DA[ 6 ]
+initial
+begin
+	DA[6] = 1'b0;
+end 
+// DA[ 5 ]
+initial
+begin
+	DA[5] = 1'b0;
+end 
+// DA[ 4 ]
+initial
+begin
+	DA[4] = 1'b0;
+end 
+// DA[ 3 ]
+initial
+begin
+	DA[3] = 1'b0;
+end 
+// DA[ 2 ]
+initial
+begin
+	DA[2] = 1'b0;
+end 
+// DA[ 1 ]
+initial
+begin
+	DA[1] = 1'b0;
+end 
+// DA[ 0 ]
+initial
+begin
+	DA[0] = 1'b0;
+end 
+// SA[ 47 ]
+initial
+begin
+	SA[47] = 1'b0;
+	SA[47] = #60000 1'b1;
+	SA[47] = #20000 1'b0;
+	SA[47] = #340000 1'b1;
+	SA[47] = #20000 1'b0;
+end 
+// SA[ 46 ]
+initial
+begin
+	SA[46] = 1'b0;
+end 
+// SA[ 45 ]
+initial
+begin
+	SA[45] = 1'b0;
+	SA[45] = #60000 1'b1;
+	SA[45] = #20000 1'b0;
+	SA[45] = #340000 1'b1;
+	SA[45] = #20000 1'b0;
+end 
+// SA[ 44 ]
+initial
+begin
+	SA[44] = 1'b0;
+	SA[44] = #60000 1'b1;
+	SA[44] = #20000 1'b0;
+end 
+// SA[ 43 ]
+initial
+begin
+	SA[43] = 1'b0;
+end 
+// SA[ 42 ]
+initial
+begin
+	SA[42] = 1'b0;
+end 
+// SA[ 41 ]
+initial
+begin
+	SA[41] = 1'b0;
+end 
+// SA[ 40 ]
+initial
+begin
+	SA[40] = 1'b0;
+end 
+// SA[ 39 ]
+initial
+begin
+	SA[39] = 1'b0;
+end 
+// SA[ 38 ]
+initial
+begin
+	SA[38] = 1'b0;
+end 
+// SA[ 37 ]
+initial
+begin
+	SA[37] = 1'b0;
+end 
+// SA[ 36 ]
+initial
+begin
+	SA[36] = 1'b0;
+end 
+// SA[ 35 ]
+initial
+begin
+	SA[35] = 1'b0;
+end 
+// SA[ 34 ]
+initial
+begin
+	SA[34] = 1'b0;
+end 
+// SA[ 33 ]
+initial
+begin
+	SA[33] = 1'b0;
+end 
+// SA[ 32 ]
+initial
+begin
+	SA[32] = 1'b0;
+end 
+// SA[ 31 ]
+initial
+begin
+	SA[31] = 1'b0;
+end 
+// SA[ 30 ]
+initial
+begin
+	SA[30] = 1'b0;
+end 
+// SA[ 29 ]
+initial
+begin
+	SA[29] = 1'b0;
+end 
+// SA[ 28 ]
+initial
+begin
+	SA[28] = 1'b0;
+end 
+// SA[ 27 ]
+initial
+begin
+	SA[27] = 1'b0;
+end 
+// SA[ 26 ]
+initial
+begin
+	SA[26] = 1'b0;
+end 
+// SA[ 25 ]
+initial
+begin
+	SA[25] = 1'b0;
+end 
+// SA[ 24 ]
+initial
+begin
+	SA[24] = 1'b0;
+end 
+// SA[ 23 ]
+initial
+begin
+	SA[23] = 1'b0;
+end 
+// SA[ 22 ]
+initial
+begin
+	SA[22] = 1'b0;
+end 
+// SA[ 21 ]
+initial
+begin
+	SA[21] = 1'b0;
+end 
+// SA[ 20 ]
+initial
+begin
+	SA[20] = 1'b0;
+end 
+// SA[ 19 ]
+initial
+begin
+	SA[19] = 1'b0;
+end 
+// SA[ 18 ]
+initial
+begin
+	SA[18] = 1'b0;
+end 
+// SA[ 17 ]
+initial
+begin
+	SA[17] = 1'b0;
+end 
+// SA[ 16 ]
+initial
+begin
+	SA[16] = 1'b0;
+end 
+// SA[ 15 ]
+initial
+begin
+	SA[15] = 1'b0;
+end 
+// SA[ 14 ]
+initial
+begin
+	SA[14] = 1'b0;
+end 
+// SA[ 13 ]
+initial
+begin
+	SA[13] = 1'b0;
+end 
+// SA[ 12 ]
+initial
+begin
+	SA[12] = 1'b0;
+end 
+// SA[ 11 ]
+initial
+begin
+	SA[11] = 1'b0;
+end 
+// SA[ 10 ]
+initial
+begin
+	SA[10] = 1'b0;
+end 
+// SA[ 9 ]
+initial
+begin
+	SA[9] = 1'b0;
+end 
+// SA[ 8 ]
+initial
+begin
+	SA[8] = 1'b0;
+end 
+// SA[ 7 ]
+initial
+begin
+	SA[7] = 1'b0;
+end 
+// SA[ 6 ]
+initial
+begin
+	SA[6] = 1'b0;
+end 
+// SA[ 5 ]
+initial
+begin
+	SA[5] = 1'b0;
+end 
+// SA[ 4 ]
+initial
+begin
+	SA[4] = 1'b0;
+end 
+// SA[ 3 ]
+initial
+begin
+	SA[3] = 1'b0;
+end 
+// SA[ 2 ]
+initial
+begin
+	SA[2] = 1'b0;
+end 
+// SA[ 1 ]
+initial
+begin
+	SA[1] = 1'b0;
+end 
+// SA[ 0 ]
+initial
+begin
+	SA[0] = 1'b0;
+end 
+// port_in[ 1 ]
+initial
+begin
+	port_in[1] = 1'b0;
+	port_in[1] = #60000 1'b1;
+	port_in[1] = #20000 1'b0;
+	port_in[1] = #340000 1'b1;
+	port_in[1] = #20000 1'b0;
+end 
+// port_in[ 0 ]
+initial
+begin
+	port_in[0] = 1'b0;
+	port_in[0] = #60000 1'b1;
+	port_in[0] = #20000 1'b0;
+end 
+endmodule
+

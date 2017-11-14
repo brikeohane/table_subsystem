@@ -1,0 +1,8 @@
+
+State Machine - |replacement_fsm|state_reg
+Name state_reg.finished state_reg.update_replacement state_reg.clean_hit_file state_reg.clean_valid_file state_reg.initial 
+state_reg.initial 0 0 0 0 0 
+state_reg.clean_valid_file 0 0 0 1 1 
+state_reg.clean_hit_file 0 0 1 0 1 
+state_reg.update_replacement 0 1 0 0 1 
+state_reg.finished 1 0 0 0 1 
