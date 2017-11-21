@@ -95,24 +95,22 @@ begin
 		
 	process(clk, reset, CAMWriteEnable, Clear_Hit, Clear_Valid, rData) is
 	begin
-			if (rising_edge(clk) and reset = '1') then
+		if (rising_edge(clk)) then
+			if (reset = '1') then
 				for I in 0 to 31 loop
 					rData(I) <= "00";
 				end loop;
-		elsif (rising_edge(clk) and CAMWriteEnable = '1') then
+			elsif (CAMWriteEnable = '1') then
 					rData(to_integer(unsigned(CAMselectWrite))) <= "11";
-		elsif(rising_edge(clk) and Clear_Hit = '1') then
+			elsif (CAMWriteEnable = '0') and (rData(to_integer(unsigned(CAMselectWrite)))) = "10" then
+				rData(to_integer(unsigned(CAMselectWrite))) <= "11";
+			elsif(Clear_Hit = '1') then
 					for I in 0 to 31 loop
-						--registervalue <= rData(I); 
-						if rData(I) = "01" then
-							rData(I) <= "00";
-						elsif rData(I) = "11" then
+						if rData(I) = "11" then
 							rData(I) <= "10";
-						else
-							rData(I) <= rData(I);
 						end if;
 					end loop;
-		elsif(rising_edge(clk) and Clear_Valid = '1') then
+			elsif(Clear_Valid = '1') then
 					for J in 0 to 31 loop
 						if rData(J) = "10" then
 							rData(J) <= "00";
@@ -120,6 +118,7 @@ begin
 							rData(J) <= rData(J);
 						end if;
 					end loop;
+			end if;
 		else
 			for L in 0 to 31 loop
 				rData(L) <= rData(L);
